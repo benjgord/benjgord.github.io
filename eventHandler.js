@@ -56,7 +56,7 @@ function checkKey(event, url)
 	{
 		if (event.srcElement.id == "ip_input")
 		{
-			var url = new URL('https://api.abuseipdb.com/api/v2/check');
+			var url = new URL('https://api.abuseipdb.com/api/v2/check?');
 			requestInfo = createIPInfo();
 		}
 		else if (event.srcElement.id == "hash_input")
@@ -77,9 +77,11 @@ function createIPInfo()
 		"headers":
 		{
 			"Accept": "application/json",
-			"Key": ""
+			"Key": "",
+			"Access-Control-Allow-Origin": "*"
 		},
-		"referrerPolicy": "no-referrer"
+		"referrerPolicy": "origin-when-cross-origin",
+		"Access-Control-Allow-Origin": "*"
 	}
 	
 	return requestInfo;
