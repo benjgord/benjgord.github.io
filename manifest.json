@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+
+	"name": "IP Tester - AbuseIPDB",
+	"version": "1.0",
+
+	"background":
+	{
+		"scripts": ["backend.js"]
+	},
+	
+	// "permissions": ["tabs"],
+
+	"browser_action": 
+	{
+		"default_icon": "images/icon.png",
+		"default_title": "IP Tester",
+		"default_popup": "popup.html"
+	}
+}

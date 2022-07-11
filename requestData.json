@@ -1,0 +1,16 @@
+{
+    "method": "GET",
+    "mode": "cors",
+    "cache": "no-cache",
+    "credentials": "same-origin",
+    "headers":
+	{
+		"Accept": "application/json",
+		"Key": ""
+    },
+	"redirect": "follow",
+	"referrerPolicy": "no-referrer"
+	"body":
+	{
+		
+}

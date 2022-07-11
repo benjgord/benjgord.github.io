@@ -1,0 +1,94 @@
+html, head, body
+{
+	background-color: #18191b;
+	width: 20rem;
+	height: 30rem;
+	padding: 0;
+	margin: 0;
+}
+
+h1
+{
+	text-align: center;
+	color: #ffffff;
+	padding: inherit;
+	margin: inherit;
+}
+
+button:focus
+{
+	outline: none;
+}
+
+input:focus
+{
+	outline: none;
+}
+
+#main_body
+{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding: inherit;
+	margin: inherit;
+}
+
+.sub-header
+{
+	background-color: #18191b;
+	grid-row: 1;
+	border-style: none;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: #444444;
+	border-width: .13rem;
+	text-align: center;
+	color: #ffffff;
+	cursor: pointer;
+	padding: inherit;
+	margin: inherit;
+	padding: 5%;
+}
+
+#sh_ip
+{
+	grid-column: 1;
+	border-bottom-style: none;
+}
+
+#sh_hash
+{
+	background-color: #444444;
+	grid-column: 2;
+}
+
+#ip_data, #hash_data
+{
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	padding: 7%;
+}
+
+.input-box
+{
+	background-color: #18191b;
+	color: #ffffff;
+	border-style: none;
+	border-bottom-style: solid;
+	border-width: .1rem;
+	width: 98%;
+}
+
+#hash_data
+{
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
