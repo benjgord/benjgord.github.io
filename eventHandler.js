@@ -74,14 +74,12 @@ function createIPInfo()
 	let requestInfo = 
 	{
 		"method": "GET",
-		"headers":
+		"referrerPolicy": "origin-when-cross-origin"
+/* 		"headers":
 		{
 			"Accept": "application/json",
 			"Key": "",
-			"Access-Control-Allow-Origin": "*"
-		},
-		"referrerPolicy": "origin-when-cross-origin",
-		"Access-Control-Allow-Origin": "*"
+		} */
 	}
 	
 	return requestInfo;
@@ -89,10 +87,13 @@ function createIPInfo()
 
 function createRequest(url, enteredIP)
 {
-	var params = new URLSearchParams({"ipAddress": enteredIP, "maxAgeInDays": "30"});
+	var params = new URLSearchParams({"key": "167bafb8161cb9287062db2a5732001a38fab043433bcd6f30a5827f789092d2c26b80deae39b6d2", "ipAddress": enteredIP, "maxAgeInDays": "30"});
+	
+	//url.searchParams = params;
+	
 	var url = url + params;
 	
-	requestInfo.headers.Key = "167bafb8161cb9287062db2a5732001a38fab043433bcd6f30a5827f789092d2c26b80deae39b6d2";
+	//requestInfo.headers.Key = "167bafb8161cb9287062db2a5732001a38fab043433bcd6f30a5827f789092d2c26b80deae39b6d2";
 	
 	makeRequest(url, requestInfo);
 }
@@ -103,8 +104,8 @@ function makeRequest(url, requestInfo)
 	console.log(requestInfo);
 	
 	fetch(url, requestInfo)
-		.then(response => response.json())
-		.then(data => console.log(data));
+		.then(response => response.headers.forEach(console.log));
+		// .then(data => console.log(data));
 
 }
 
