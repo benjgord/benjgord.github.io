@@ -78,7 +78,8 @@ function createIPInfo()
 		{
 			"Accept": "application/json",
 			"Key": ""
-		}
+		},
+		"referrerPolicy": "no-referrer"
 	}
 	
 	return requestInfo;
